@@ -1,13 +1,11 @@
-import _ from 'lodash';
 import './style.css';
+import { addTask } from './crud-methods.js';
 
-function component() {
-  const element = document.createElement('div');
+const inputBtn = document.getElementById('text-input');
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+inputBtn.addEventListener('keydown', (i) => {
+  if (i.key === 'Enter' && inputBtn.value) {
+    addTask(inputBtn.value);
+    inputBtn.value = null;
+  }
+});
