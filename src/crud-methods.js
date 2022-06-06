@@ -1,8 +1,7 @@
 /* eslint-disable */
-import { setStorage } from './storage.js';
 import { clearAll } from './clear.js';
 
-export { deleteTask, updateStorage, tasks, addTask };
+export { deleteTask, updateStorage, tasks, addTask, setStorage };
 
 const toDoList = document.getElementById('to-dos');
 const clearBtn = document.getElementById('clear-button');
@@ -157,3 +156,7 @@ const updateStorage = () => {
 clearBtn.addEventListener('click', () => {
   clearAll();
 });
+
+const setStorage = (task) => {
+  localStorage.setItem('todo', JSON.stringify(task));
+};

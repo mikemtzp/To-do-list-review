@@ -1,6 +1,5 @@
 /* eslint-disable */
-import { setStorage } from './storage.js';
-import { deleteTask } from './crud-methods.js';
+import { deleteTask, setStorage } from './crud-methods.js';
 
 export { clearAll };
 

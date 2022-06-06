@@ -29,10 +29,6 @@ body {
   padding: 0.7rem;
 }
 
-.to-do-container > li {
-  display: flex;
-}
-
 .title {
   font-size: 1.4rem;
 }
